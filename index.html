@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>音声再生 音楽隊</title>
+        <link rel="stylesheet" href="./static/style.css" />
+
+        <!-- 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" /> -->
+    </head>
+    <body>
+        <header class="header" id="header">
+            <div id="company-logo">
+                <img src="./static/image/logo1.png" alt="neibo_logo" />
+            </div>
+            <div id="current-time"></div>
+            <div id="mode-badge">音声再生 音楽隊</div>
+        </header>
+
+        <main id="mainContent">
+            <div class="button-container">
+
+                <div class="row row-2">
+                    <button class="play-button pos-1" data-label="1" data-media-id="68c181b8-d5ec-408c-8125-6d5b074d9c7d">
+                        <span class="title">①<br>マルチ</span>
+                    </button>
+                    <button class="play-button pos-2" data-label="2" data-media-id="9978388b-de3f-4cc0-8f69-b0619fcff618">
+                        <span class="title">②<br>マルチ</span>
+                    </button>
+                    <button class="play-button pos-3" data-label="3" data-media-id="78825ba9-1f3b-40df-8d48-279e2193d498">
+                        <span class="title">③<br>マルチ</span>
+                    </button>
+                    <button class="play-button pos-4" data-label="4" data-media-id="e4a0328d-96df-4b64-aab2-714cf502bfaf">
+                        <span class="title">④<br>マルチ</span>
+                    </button>
+                </div>
+                <!-- <div class="row row-5">
+                    <button class="play-button pos-5" data-label="5" data-media-id="089f7342-72ac-4c5b-a500-b17f6a0afe76">
+                        <span class="title">⑤<br>マルチ</span>
+                    </button>
+                    <button class="play-button pos-6" data-label="6" data-media-id="a56b0448-c10f-4fb1-acef-df7f11ee1aec">
+                        <span class="title">⑥<br>パワフル</span>
+                    </button>
+                    <button class="play-button pos-7" data-label="7" data-media-id="7ea2f4d1-8dda-4e1b-a65a-67bbe5228733">
+                        <span class="title">⑦<br>マルチ</span>
+                    </button>
+                    <button class="play-button pos-8" data-label="8" data-media-id="50dc45da-1d4a-4c79-b8e6-b7482e744131">
+                        <span class="title">⑧<br>パワフル</span>
+                    </button>
+
+                </div>
+                <div class="row row-5">
+                    <button class="play-button pos-9" data-label="9" data-media-id="42d757bd-788b-4545-abe4-852cd78c8a5e">
+                        <span class="title">⑨<br>マルチ</span>
+                    </button>
+                    <button class="play-button pos-10" data-label="10" data-media-id="af85cc15-2053-4205-a705-5455c1e7090a">
+                        <span class="title">⑩<br>パワフル</span>
+                    </button>
+                    <button class="play-button pos-11" data-label="11" data-media-id="37e83544-f8f3-4ad1-a7f6-99d3eaf175de">
+                        <span class="title">⑪<br>マルチ</span>
+                    </button>
+                    <button class="play-button pos-12" data-label="12" data-media-id="17cea981-ac71-420b-8b2f-dc2daa795fa5">
+                        <span class="title">⑫<br>パワフル</span>
+                    </button>
+
+                </div> -->
+
+
+                <button class="stop-button pos-stop">再生停止</button>
+                <div class="mode-row">
+                    <button class="control-button mode-button pos-heart-eye" data-mode="heart_eye"><span class="title">目♥</span></button>
+                    <button class="control-button mode-button pos-normal" data-mode="normal"><span class="title">通常</span></button>
+                </div>
+            </div>
+        </main>
+
+        <div id="mediaConfigPopup" class="popup-overlay" style="display: none">
+            <div class="popup-panel">
+                <h2>メディア設定</h2>
+                <div id="mediaConfigList" class="popup-list"></div>
+
+                <div class="popup-actions">
+                    <button id="mediaConfigCancel" class="popup-btn">キャンセル</button>
+                    <button id="mediaConfigSave" class="popup-btn primary">保存</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="./static/module/api.js"></script>
+        <script src="./static/module/function.js"></script>
+        <script src="./static/script.js"></script>
+    </body>
+</html>
